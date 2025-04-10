@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="پنل مدیریت ابزار بتن">
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'none';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), payment=()">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+
+    <title>داشبورد مدیریت | ابزار بتن</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+    <div class="admin-dashboard">
+        <!-- Sidebar Navigation -->
+        <aside class="admin-sidebar">
+            <div class="admin-sidebar-header">
+                <div class="admin-sidebar-logo">
+                    <img src="../img/logo.png" alt="ابزار بتن">
+                </div>
+                <div class="admin-sidebar-title">پنل مدیریت</div>
+                <div class="admin-user-info">
+                    <div class="admin-user-avatar">م</div>
+                    <div class="admin-user-name">مدیر سیستم</div>
+                </div>
+            </div>
+
+            <nav class="admin-sidebar-menu">
+                <ul>
+                    <li class="admin-menu-item">
+                        <a href="dashboard.html" class="admin-menu-link active">
+                            <i class="fas fa-home"></i>
+                            <span>داشبورد</span>
+                        </a>
+                    </li>
+                    <li class="admin-menu-item">
+                        <a href="products.html" class="admin-menu-link">
+                            <i class="fas fa-boxes"></i>
+                            <span>محصولات</span>
+                        </a>
+                    </li>
+                    <li class="admin-menu-item">
+                        <a href="categories.html" class="admin-menu-link">
+                            <i class="fas fa-tags"></i>
+                            <span>دسته‌بندی‌ها</span>
+                        </a>
+                    </li>
+                    <li class="admin-menu-item">
+                        <a href="articles.html" class="admin-menu-link">
+                            <i class="fas fa-newspaper"></i>
+                            <span>مقالات</span>
+                        </a>
+                    </li>
+                    <li class="admin-menu-item">
+                        <a href="slider.html" class="admin-menu-link">
+                            <i class="fas fa-images"></i>
+                            <span>اسلایدر</span>
+                        </a>
+                    </li>
+                    <li class="admin-menu-item">
+                        <a href="features.html" class="admin-menu-link">
+                            <i class="fas fa-star"></i>
+                            <span>ویژگی‌ها</span>
+                        </a>
+                    </li>
+                    <li class="admin-menu-item">
+                        <a href="messages.html" class="admin-menu-link">
+                            <i class="fas fa-comments"></i>
+                            <span>پیام‌ها</span>
+                        </a>
+                    </li>
+                    <li class="admin-menu-item">
+                        <a href="settings.html" class="admin-menu-link">
+                            <i class="fas fa-cog"></i>
+                            <span>تنظیمات</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="admin-sidebar-footer">
+                <button id="logout-btn" class="admin-logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>خروج</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="admin-content">
+            <header class="admin-header">
+                <h1 class="admin-page-title">داشبورد</h1>
+                <div class="admin-header-actions">
+                    <button id="mobile-menu-toggle" class="admin-mobile-menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Stats Summary -->
+            <div class="admin-stats-grid">
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon">
+                        <i class="fas fa-boxes"></i>
+                    </div>
+                    <div class="admin-stat-title">تعداد محصولات</div>
+                    <div class="admin-stat-value">124</div>
+                    <div class="admin-stat-change positive">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>8% از ماه گذشته</span>
+                    </div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="admin-stat-title">بازدیدهای ماهانه</div>
+                    <div class="admin-stat-value">2,348</div>
+                    <div class="admin-stat-change positive">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>12% از ماه گذشته</span>
+                    </div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="admin-stat-title">پیام‌های جدید</div>
+                    <div class="admin-stat-value">14</div>
+                    <div class="admin-stat-change negative">
+                        <i class="fas fa-arrow-down"></i>
+                        <span>3% از ماه گذشته</span>
+                    </div>
+                </div>
+
+                <div class="admin-stat-card">
+                    <div class="admin-stat-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <div class="admin-stat-title">تعداد مقالات</div>
+                    <div class="admin-stat-value">36</div>
+                    <div class="admin-stat-change positive">
+                        <i class="fas fa-arrow-up"></i>
+                        <span>5% از ماه گذشته</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Products -->
+            <section class="admin-section">
+                <div class="admin-section-header">
+                    <h2 class="admin-section-title">محصولات اخیر</h2>
+                    <a href="products.html" class="btn">مشاهده همه</a>
+                </div>
+
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>تصویر</th>
+                                <th>عنوان</th>
+                                <th>دسته‌بندی</th>
+                                <th>تاریخ ایجاد</th>
+                                <th>عملیات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img src="../img/product1.jpg" alt="پمپ هیدرولیک" width="50" height="50">
+                                </td>
+                                <td>پمپ هیدرولیک a10v028</td>
+                                <td>قطعات هیدرولیک</td>
+                                <td>1402/02/15</td>
+                                <td>
+                                    <div class="admin-table-actions">
+                                        <button class="admin-btn admin-btn-view">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="admin-btn admin-btn-edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="admin-btn admin-btn-delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../img/product2.jpg" alt="بوش برنجی" width="50" height="50">
+                                </td>
+                                <td>بوش برنجی</td>
+                                <td>قطعات یدکی</td>
+                                <td>1402/02/12</td>
+                                <td>
+                                    <div class="admin-table-actions">
+                                        <button class="admin-btn admin-btn-view">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="admin-btn admin-btn-edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="admin-btn admin-btn-delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="../img/product3.jpg" alt="سیلندر سوئیچینگ" width="50" height="50">
+                                </td>
+                                <td>سیلندر سوئیچینگ</td>
+                                <td>قطعات هیدرولیک</td>
+                                <td>1402/02/10</td>
+                                <td>
+                                    <div class="admin-table-actions">
+                                        <button class="admin-btn admin-btn-view">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="admin-btn admin-btn-edit">
+                                            <i class="fas fa-edit"></i>
+                                        </button>
+                                        <button class="admin-btn admin-btn-delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Recent Messages -->
+            <section class="admin-section">
+                <div class="admin-section-header">
+                    <h2 class="admin-section-title">پیام‌های اخیر</h2>
+                    <a href="messages.html" class="btn">مشاهده همه</a>
+                </div>
+
+                <div class="admin-table-container">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>فرستنده</th>
+                                <th>موضوع</th>
+                                <th>تاریخ</th>
+                                <th>وضعیت</th>
+                                <th>عملیات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>علی محمدی</td>
+                                <td>استعلام قیمت قطعات پمپ بتن</td>
+                                <td>1402/02/18</td>
+                                <td><span class="badge badge-new">جدید</span></td>
+                                <td>
+                                    <div class="admin-table-actions">
+                                        <button class="admin-btn admin-btn-view">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="admin-btn admin-btn-delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>رضا کریمی</td>
+                                <td>درخواست همکاری</td>
+                                <td>1402/02/17</td>
+                                <td><span class="badge badge-read">خوانده شده</span></td>
+                                <td>
+                                    <div class="admin-table-actions">
+                                        <button class="admin-btn admin-btn-view">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="admin-btn admin-btn-delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>مهدی اکبری</td>
+                                <td>سوال درباره نحوه خرید</td>
+                                <td>1402/02/15</td>
+                                <td><span class="badge badge-replied">پاسخ داده شده</span></td>
+                                <td>
+                                    <div class="admin-table-actions">
+                                        <button class="admin-btn admin-btn-view">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="admin-btn admin-btn-delete">
+                                            <i class="fas fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/admin.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="پنل مدیریت ابزار بتن">
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; form-action 'self'; base-uri 'self'; frame-ancestors 'none';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), payment=()">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+
+    <title>پنل مدیریت | ابزار بتن</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body class="admin-body">
+    <div class="admin-login-container">
+        <div class="admin-login-box">
+            <div class="admin-login-logo">
+                <img src="../img/logo.png" alt="ابزار بتن" width="150">
+            </div>
+
+            <h1 class="admin-login-title">ورود به پنل مدیریت</h1>
+
+            <form id="admin-login-form" class="admin-login-form">
+                <div class="form-group">
+                    <label for="username">نام کاربری</label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        class="form-control"
+                        placeholder="نام کاربری خود را وارد کنید"
+                        autocomplete="username"
+                        required
+                        maxlength="50"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">رمز عبور</label>
+                    <div class="password-input-wrapper">
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            class="form-control"
+                            placeholder="رمز عبور خود را وارد کنید"
+                            autocomplete="current-password"
+                            required
+                            minlength="8"
+                            maxlength="64"
+                        >
+                        <button type="button" id="toggle-password" class="toggle-password" aria-label="نمایش/پنهان کردن رمز عبور">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="remember-me-wrapper">
+                        <input type="checkbox" id="remember-me" name="remember-me">
+                        <label for="remember-me">مرا به خاطر بسپار</label>
+                    </div>
+                </div>
+
+                <div id="login-error" class="login-error" style="display: none;"></div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">ورود</button>
+                </div>
+
+                <div class="forgot-password">
+                    <a href="forgot-password.html">رمز عبور خود را فراموش کرده‌اید؟</a>
+                </div>
+            </form>
+
+            <div class="back-to-site">
+                <a href="../index.html">بازگشت به سایت <i class="fas fa-arrow-left"></i></a>
+            </div>
+        </div>
+
+        <div class="admin-login-footer">
+            <p>تمامی حقوق برای ابزار بتن محفوظ است &copy; 1402</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/login.js" defer></script>
+</body>
+</html>

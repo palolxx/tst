@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /db/
+
+# Sitemap
+Sitemap: https://www.abzarbeton.net/sitemap.xml

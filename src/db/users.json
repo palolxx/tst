@@ -1,0 +1,63 @@
+{
+  "users": [
+    {
+      "id": "u001",
+      "username": "admin",
+      "name": "مدیر سیستم",
+      "email": "admin@abzarbeton.net",
+      "role": "admin",
+      "password": "$2b$10$z8JLUt5s43bJDSewTfbqU.3tUXjnZb4JbWJKlIZfI.A7VeTGfK4Qa",
+      "passwordSalt": "$2b$10$z8JLUt5s43bJDSewTfbqU.",
+      "lastLogin": "1402/02/18",
+      "createdAt": "1401/06/15",
+      "active": true,
+      "permissions": ["manage_products", "manage_categories", "manage_articles", "manage_settings", "manage_users"]
+    },
+    {
+      "id": "u002",
+      "username": "editor",
+      "name": "ویرایشگر محتوا",
+      "email": "editor@abzarbeton.net",
+      "role": "editor",
+      "password": "$2b$10$XcDBEzAm.w1SYoRy6xCJEe.dHCi9HpbkpHxcPWbzqYAo3BU/Amuoe",
+      "passwordSalt": "$2b$10$XcDBEzAm.w1SYoRy6xCJEe.",
+      "lastLogin": "1402/02/16",
+      "createdAt": "1401/10/10",
+      "active": true,
+      "permissions": ["manage_products", "manage_articles"]
+    }
+  ],
+  "roles": [
+    {
+      "id": "role001",
+      "name": "admin",
+      "description": "مدیر کل سیستم با دسترسی به تمام بخش‌ها",
+      "permissions": ["manage_products", "manage_categories", "manage_articles", "manage_settings", "manage_users"]
+    },
+    {
+      "id": "role002",
+      "name": "editor",
+      "description": "ویرایشگر محتوا با دسترسی به محصولات و مقالات",
+      "permissions": ["manage_products", "manage_articles"]
+    }
+  ],
+  "authSettings": {
+    "passwordPolicy": {
+      "minLength": 8,
+      "requireUppercase": true,
+      "requireLowercase": true,
+      "requireNumbers": true,
+      "requireSpecialChars": true
+    },
+    "loginAttempts": {
+      "maxAttempts": 5,
+      "lockoutDuration": 30 // minutes
+    },
+    "sessionTimeout": 60, // minutes
+    "tokenExpiration": {
+      "access": 60, // minutes
+      "refresh": 7 // days
+    }
+  },
+  "_securityNote": "This is a demonstration file. In a real production environment, user credentials should never be stored in plain text files. Instead, use a secure database with proper authentication mechanisms and encryption. The passwords here are securely hashed using bcrypt (the hash shown is for the password 'admin12345')."
+}
